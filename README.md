@@ -1,7 +1,9 @@
 **UCL Match Predictor: Neural Network vs. XGBoost**
+
 This project implements a robust machine learning pipeline to predict UEFA Champions League match outcomes (Home Win, Draw, Away Win). It leverages historical match statistics, advanced Expected Goals (xG) data, and compares the performance of a deep learning approach against a gradient-boosted tree model.
 
 🚀 **Key Features**
+
 Data Integration: Merges standard match statistics (shots, saves, possession) with scraped Expected Goals (xG) and Delta_xG metrics.
 
 Fuzzy Name Matching: Uses difflib to synchronize team names between different data sources (e.g., "Man City" vs. "Manchester City").
@@ -13,6 +15,7 @@ Three-Way Data Split: Implements a strict 70/15/15 (Train/Validation/Test) split
 Model Comparison: Direct head-to-head comparison between a TensorFlow/Keras Neural Network and an XGBoost Classifier.
 
 🏗️ **Pipeline Architecture**
+
 1. Data Engineering & Cleaning
 
 The script processes raw match data by:
@@ -48,6 +51,7 @@ Objective: multi:softmax for multi-class classification.
 Reliability: Uses 5-Fold Cross-Validation during training to assess model stability across different data subsets.
 
 📊 **Evaluation & Visualization**
+
 The project generates several key visualizations to diagnose model performance:
 
 Training History: Plots accuracy and loss curves for the Neural Network to detect overfitting.
@@ -57,15 +61,18 @@ Confusion Matrices: Provides a side-by-side comparison of how each model handles
 Feature Importance: A gain-based plot showing which statistics (e.g., Delta_xG) most influence XGBoost's decisions.
 
 🛠️ **Setup and Installation**
+
 Environment: Designed for Python 3.10+ (compatible with Google Colab).
 
 **Dependencies:**
 
 Bash
 pip install pandas numpy tensorflow xgboost matplotlib seaborn scikit-learn
+
 Data Requirements: Requires champions_league_matches.csv and all_scraped_xg_stats.csv in the local directory.
 
 📈 **Next Steps**
+
 Market Value Integration: Incorporate team squad values to provide a financial "quality baseline."
 
 Rolling Averages: Implement expanding window rolling stats to capture team form.
